@@ -28,6 +28,8 @@ set bs=2
 set number
 set relativenumber
 set wrap linebreak nolist
+" For md files, hard line breaks at 100
+au BufRead,BufNewFile *.md setlocal textwidth=100
 
 set timeout
 set ttimeout

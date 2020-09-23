@@ -7,7 +7,7 @@ endif
 call plug#begin('~/.vim/plugged')
   Plug 'https://github.com/vim-airline/vim-airline.git'
   Plug 'https://github.com/lifepillar/vim-gruvbox8.git'
-  Plug 'Valloric/YouCompleteMe'
+  Plug 'https://github.com/ycm-core/YouCompleteMe', { 'commit': 'd98f896ada495c3687007313374b2f945a2f2fb4' } 
   Plug 'https://github.com/nvie/vim-flake8.git'
   Plug 'https://github.com/scrooloose/nerdtree.git'
   Plug 'https://github.com/tpope/vim-repeat.git'

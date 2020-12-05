@@ -34,6 +34,16 @@ set bs=2
 set number
 set relativenumber
 set wrap linebreak nolist
+
+" Autoclose quotes, braces, etc.
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
 " For md files, hard line breaks at 100
 au BufRead,BufNewFile *.md setlocal textwidth=100
 
@@ -68,17 +78,21 @@ filetype plugin indent on
 set path+=**
 set wildmenu
 
+" YCM (YouCompleteMe) - requires manual build
 let g:ycm_python_binary_path = 'python3'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_auto_trigger = 1
 let g:ycm_min_num_of_chars_for_completion = 1
 let g:ycm_always_populate_location_list = 1
 
+" Display doc in YCM
+:nnoremap <leader>d :YcmCompleter GetDoc<cr>
 
 let g:go_fmt_command = "goimports"
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 let g:go_def_mapping_enabled = 0
+let g:go_list_type = "quickfix"
 
 let g:ragtag_global_maps = 1
 

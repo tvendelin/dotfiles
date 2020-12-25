@@ -46,6 +46,8 @@ inoremap {;<CR> {<CR>};<ESC>O
 
 " For md files, hard line breaks at 100
 au BufRead,BufNewFile *.md setlocal textwidth=100
+" tab 2 spaces for yaml
+au BufRead,BufNewFile *.yaml,*.yml set shiftwidth=2
 
 set timeout
 set ttimeout

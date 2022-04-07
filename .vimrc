@@ -36,8 +36,8 @@ set relativenumber
 set wrap linebreak nolist
 
 " Autoclose quotes, braces, etc.
-inoremap " ""<left>
-inoremap ' ''<left>
+inoremap "" ""<left>
+inoremap '' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>

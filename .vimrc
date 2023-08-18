@@ -19,9 +19,7 @@ call plug#begin('~/.vim/plugged')
 "  Plug 'https://github.com/kana/vim-textobj-indent.git'
 call plug#end()
 
-" Change on Linux!
-set rtp+=/opt/local/share/fzf/vim
-let g:flake8_cmd = '/opt/local/Library/Frameworks/Python.framework/Versions/3.8/bin/flake8'
+let g:flake8_cmd = '/opt/local/Library/Frameworks/Python.framework/Versions/3.11/bin/flake8'
 
 syntax on
 set tabstop=4

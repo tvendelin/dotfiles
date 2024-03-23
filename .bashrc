@@ -12,7 +12,8 @@ export FZF_DEFAULT_OPTS='--extended --height=100% --reverse --preview="cat {}" -
 export FZF_DEFAULT_COMMAND='fd'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-export PS1="\w>"
+# export PS1="\w>"
+export PS1='\w\[\033[33m\]$(__git_ps1 ":%s")\[\033[00m\]>'
 
 export HISTSIZE=-1
 export HISTFILESIZE=-1

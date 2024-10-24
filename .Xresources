@@ -1,73 +1,126 @@
-xterm*utf8: 1
+Xft.dpi: 192
 
-XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
-XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
+! These might also be useful depending on your monitor and personal preference:
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
 
-XTerm*VT100*selectToClipboard:  true
-XTerm*visualbell: true
-XTerm*bellIsUrgent: true
+! urxvt configuration
+URxvt*background: [90]#1E1E1E
+URxvt*depth: 32
+URxvt*foreground: #E6D4A3
+URxvt.cursorColor: #EE0000
 
-xterm*VT100.Translations: #override \
-    Ctrl <Key> minus: smaller-vt-font() \n\
-    Ctrl <Key> plus: larger-vt-font() \n\
-    Ctrl <Key> 0: set-vt-font(d) \n\
-    Shift <KeyPress> Insert: insert-selection(CLIPBOARD) \n\
-    Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
-    Ctrl Shift <Key>C:    copy-selection(CLIPBOARD) \n\
-    Shift <Btn1Up>: exec-formatted("firefox '%t'", PRIMARY)
+URxvt*font: xft:Monospace:pixelsize=24:antialias=true
 
+URxvt.color0: 	#1E1E1E
+URxvt.color1: 	#CC0000
+URxvt.color2: 	#828415
+URxvt.color3: 	#CC881A
+URxvt.color4: 	#387376
+URxvt.color5: 	#A04B73
+URxvt.color6: 	#578F57
+URxvt.color7: 	#988871
+URxvt.color8: 	#807061
+URxvt.color9: 	#F73028
+URxvt.color10:  #AAB01E
+URxvt.color11:  #F7B125
+URxvt.color12:  #719586
+URxvt.color13:  #C77089
+URxvt.color14:  #7DB669
+URxvt.color15:  #E6D4A3
 
-xterm*geometry: 160x36+200+300
+URxvt*perl-ext-common:       default,keyboard-select,clipboard,url-select,matcher,resize-font
+URxvt.url-select.launcher:   /usr/bin/firefox
+URxvt*matcher.button:        1
+URxvt*keysym.M-Escape:       perl:keyboard-select:activate
+URxvt*keysym.M-s:            perl:keyboard-select:search
+URxvt*keysym.M-u:            perl:url-select:select_next
+URxvt*keysym.M-v:            perl:clipboard:paste
+URxvt.keysym.S-C-V:          eval:paste_clipboard
+URxvt*clipboard.autocopy:    true
+URxvt.resize-font.smaller:   C-Down
+URxvt.resize-font.bigger:    C-Up
+URxvt.resize-font.reset:     C-equal
+URxvt.resize-font.show:      C-question
 
-!xterm*font: -*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-1
-xterm*faceName: "Monospace" 
-xterm*renderFont: true
+URxvt.iso14755: false
+URxvt.iso14755_52: false
 
-xterm*faceSize: 12
-
-xterm*faceSize1: 8
-xterm*faceSize2: 10
-xterm*faceSize3: 12
-xterm*faceSize4: 16
-xterm*faceSize5: 22
-
-#define _color0 	#1E1E1E
-#define _color1 	#CC0000
-#define _color2 	#828415
-#define _color3 	#CC881A
-#define _color4 	#387376
-#define _color5 	#A04B73
-#define _color6 	#578F57
-#define _color7 	#988871
-#define _color8 	#807061
-#define _color9 	#F73028
-#define _color10	#AAB01E
-#define _color11	#F7B125
-#define _color12	#719586
-#define _color13	#C77089
-#define _color14	#7DB669
-#define _color15	#E6D4A3
-
-xterm*foreground: #E6D4A3
-xterm*background: #1E1E1E
-
-xterm*color0:	_color0
-xterm*color1:	_color1
-xterm*color2:	_color2
-xterm*color3:	_color3
-xterm*color4:	_color4
-xterm*color5:	_color5
-xterm*color6:	_color6
-xterm*color7:	_color7
-xterm*color8:	_color8
-xterm*color9:	_color9
-xterm*color10:	_color10
-xterm*color11:	_color11
-xterm*color12:	_color12
-xterm*color13:	_color13
-xterm*color14:	_color14
-xterm*color15:	_color15
-
-xterm*ScrollBar: on
-xterm*scrollBar: true
-xterm*rightScrollBar: true
+! xterm config 
+! xterm*utf8: 1
+! 
+! XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+! XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
+! 
+! XTerm*VT100*selectToClipboard:  true
+! XTerm*visualbell: true
+! XTerm*bellIsUrgent: true
+! 
+! xterm*VT100.Translations: #override \
+!     Ctrl <Key> minus: smaller-vt-font() \n\
+!     Ctrl <Key> plus: larger-vt-font() \n\
+!     Ctrl <Key> 0: set-vt-font(d) \n\
+!     Shift <KeyPress> Insert: insert-selection(CLIPBOARD) \n\
+!     Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+!     Ctrl Shift <Key>C:    copy-selection(CLIPBOARD) \n\
+!     Shift <Btn1Up>: exec-formatted("firefox '%t'", PRIMARY)
+! 
+! 
+! xterm*geometry: 160x36+200+300
+! 
+! !xterm*font: -*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-1
+! xterm*faceName: "Monospace" 
+! xterm*renderFont: true
+! 
+! xterm*faceSize: 12
+! 
+! xterm*faceSize1: 8
+! xterm*faceSize2: 10
+! xterm*faceSize3: 12
+! xterm*faceSize4: 16
+! xterm*faceSize5: 22
+! 
+! #define _color0 	#1E1E1E
+! #define _color1 	#CC0000
+! #define _color2 	#828415
+! #define _color3 	#CC881A
+! #define _color4 	#387376
+! #define _color5 	#A04B73
+! #define _color6 	#578F57
+! #define _color7 	#988871
+! #define _color8 	#807061
+! #define _color9 	#F73028
+! #define _color10	#AAB01E
+! #define _color11	#F7B125
+! #define _color12	#719586
+! #define _color13	#C77089
+! #define _color14	#7DB669
+! #define _color15	#E6D4A3
+! 
+! xterm*foreground: #E6D4A3
+! xterm*background: #1E1E1E
+! 
+! xterm*color0:	_color0
+! xterm*color1:	_color1
+! xterm*color2:	_color2
+! xterm*color3:	_color3
+! xterm*color4:	_color4
+! xterm*color5:	_color5
+! xterm*color6:	_color6
+! xterm*color7:	_color7
+! xterm*color8:	_color8
+! xterm*color9:	_color9
+! xterm*color10:	_color10
+! xterm*color11:	_color11
+! xterm*color12:	_color12
+! xterm*color13:	_color13
+! xterm*color14:	_color14
+! xterm*color15:	_color15
+! 
+! xterm*ScrollBar: on
+! xterm*scrollBar: true
+! xterm*rightScrollBar: true

@@ -5,7 +5,7 @@ set -o vi
 
 alias ll='ls -lhF'
 alias l='ls -lahF'
-alias vi=nvim
+alias vi=vim
 
 # FZF
 #export FZF_DEFAULT_OPTS='--extended --height=100% --reverse --preview="cat {}" --preview-window=right:60%:wrap'

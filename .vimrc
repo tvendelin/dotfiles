@@ -7,14 +7,14 @@ endif
 call plug#begin('~/.vim/plugged')
   Plug 'https://github.com/vim-airline/vim-airline.git'
   Plug 'https://github.com/lifepillar/vim-gruvbox8.git'
-  Plug 'https://github.com/ycm-core/YouCompleteMe'
+"  Plug 'https://github.com/ycm-core/YouCompleteMe'
   Plug 'https://github.com/nvie/vim-flake8.git'
   Plug 'https://github.com/scrooloose/nerdtree.git'
   Plug 'https://github.com/tpope/vim-repeat.git'
   Plug 'https://github.com/tpope/vim-surround.git'
   Plug 'https://github.com/tpope/vim-commentary.git'
   Plug 'https://github.com/tpope/vim-ragtag.git'
-  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 "  Plug 'https://github.com/kana/vim-textobj-user.git'
 "  Plug 'https://github.com/kana/vim-textobj-indent.git'
 call plug#end()

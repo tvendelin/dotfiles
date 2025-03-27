@@ -1,0 +1,20 @@
+[database]
+
+path=/home/void/Mail/gmail
+
+[user]
+name=your name
+primary_email=your_account@gmail.com
+
+[new]
+tags=unread;inbox;sent;
+ignore=
+
+[search]
+exclude_tags=deleted;spam;
+
+[maildir]
+synchronize_flags=true
+
+[crypto]
+gpg_path=gpg
